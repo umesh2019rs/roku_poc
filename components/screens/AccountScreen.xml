@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="AccountScreen" extends="Group" focusable="true">
+    <script type="text/brightscript" uri="pkg:/components/screens/AccountScreen.brs" />
+    <interface>
+        <field id="logOutSuccess" type="boolean" alwaysNotify="true" />
+    </interface>
+    <children>
+        <LayoutGroup
+            id="accountLayout"
+            translation="[350, 280]"
+            layoutDirection="vert"
+            horizAlignment="center"
+            itemSpacings="[40]"
+            focusable="true">
+            <Label
+                id="accountTitle"
+                text="Account"
+                fontSize="48"
+                color="0xFFFFFFFF"
+                horizAlignment="center" />
+            <Label
+                id="accountSubtitle"
+                text="Sign out of your account"
+                fontSize="28"
+                color="0xCCCCCCFF"
+                horizAlignment="center" />
+            <Button
+                id="logOutButton"
+                width="320"
+                height="64"
+                focusable="true"
+                horizAlignment="center">
+                <Rectangle id="logOutButtonBg" width="320" height="64" color="0xC0392BFF" />
+                <Label id="logOutButtonLabel" text="Logout" translation="[95, 18]" fontSize="28" color="0xFFFFFFFF" />
+            </Button>
+        </LayoutGroup>
+    </children>
+</component>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="HomeScreen" extends="Group" focusable="true">
+    <script type="text/brightscript" uri="pkg:/components/screens/HomeScreen.brs" />
+    <interface>
+        <field id="itemSelected" type="node" alwaysNotify="true" />
+    </interface>
+    <children>
+        <Poster 
+            id="dynamicPoster" 
+            uri="pkg:/images/profile.jpg"  
+            translation="[50, 10]" 
+            width="890" 
+            height="170" 
+            focusable="true"/>
+        <RowList
+            id="rowList"
+            translation="[50, 200]"
+            numRows="3"
+            drawFocusFeedback="true"
+            vertFocusAnimationStyle="fixedFocus"
+            focusable="true" />
+    </children>
+</component>
+
+

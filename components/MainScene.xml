@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="MainScene" extends="Scene" focusable="true">
+    <script type="text/brightscript" uri="UILogic/ScreenStackLogic.brs" />
+    <script type="text/brightscript" uri="UILogic/ContentNavigationLogic.brs" />
+    <script type="text/brightscript" uri="UILogic/MainNavigationLogic.brs" />
+    <script type="text/brightscript" uri="UILogic/VideoPlayerLogic.brs" />
+    <script type="text/brightscript" uri="MainScene.brs" />
+    <interface>
+        <field id="signal" type="string" alwaysNotify="true" />
+    </interface>
+    <children>
+        <Group id="drawerContainer" translation="[0, 0]" visible="false" clippingRect="[0, 0, 250, 1080]">
+            <Rectangle id="rectBG" width="250" height="1080" color="0x4B0082FF"/>
+            <Group id="drawerContent" translation="[0, 0]">
+                <Poster
+                    id="profileImage"
+                    uri="pkg:/images/profile.jpg"
+                    width="100"
+                    height="100"
+                    translation="[75, 50]" />
+                <LabelList
+                    id="menuList"
+                    translation="[50, 300]"
+                    width="100"
+                    height="600"
+                    color="0xFFFFFFFF"
+                    focusedColor="0xA00000FF"
+                    vertFocusAnimationStyle="fixedFocus"
+                    drawFocusFeedback="true"
+                    itemSpacing="[25,25]"
+                    focusable="true"/>
+            </Group>
+        </Group>
+        <Group
+            id="contentArea"
+            translation="[300, 0]"
+            width="1600"
+            height="1080"
+            focusable="true"/>
+    </children>
+</component>

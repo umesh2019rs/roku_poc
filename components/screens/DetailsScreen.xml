@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="DetailsScreen" extends="Group" focusable="true" initialFocus="actionButtons">
+    <script type="text/brightscript" uri="pkg:/components/screens/DetailsScreen.brs" />
+    <interface>
+        <field id="itemData" type="node" alwaysNotify="true" onChange="onItemDataChanged" />
+        <field id="detailMode" type="string" value="movie" onChange="applyDetailMode" />
+        <field id="focusButton" type="string" value="play" />
+        <field id="actionSelected" type="string" alwaysNotify="true" />
+        <field id="buttonSelected" type="integer" alias="actionButtons.itemSelected" />
+    </interface>
+    <children>
+        <Label
+            id="brandLabel"
+            translation="[80, 60]"
+            text="Roku Developers"
+            fontSize="36"
+            color="0xFFFFFFFF" />
+        <LayoutGroup
+            id="detailsLayout"
+            translation="[80, 140]"
+            layoutDirection="horiz"
+            itemSpacings="[60]"
+            vertAlignment="top">
+            <LayoutGroup layoutDirection="vert" itemSpacings="[10]" horizAlignment="left">
+                <Poster
+                    id="poster"
+                    width="320"
+                    height="320"
+                    loadWidth="320"
+                    loadHeight="320"
+                    loadDisplayMode="scaleToFit" />
+                <Label
+                    id="posterTitle"
+                    width="320"
+                    horizAlignment="center"
+                    fontSize="24"
+                    color="0xFFFFFFFF"
+                    wrap="true"
+                    maxLines="2" />
+            </LayoutGroup>
+            <LayoutGroup layoutDirection="vert" itemSpacings="[14]" width="900">
+                <LabelList
+                    id="actionButtons"
+                    itemSize="[520, 56]"
+                    itemSpacing="[0, 12]"
+                    color="0xDDDDDDFF"
+                    focusedColor="0xFFFFFFFF"
+                    drawFocusFeedback="true"
+                    vertFocusAnimationStyle="fixedFocus"
+                    focusable="true" />
+                <Label
+                    id="description"
+                    width="900"
+                    wrap="true"
+                    maxLines="4"
+                    fontSize="28"
+                    color="0xFFFFFFFF" />
+                <Label
+                    id="date"
+                    fontSize="24"
+                    color="0xCCCCCCFF" />
+            </LayoutGroup>
+        </LayoutGroup>
+    </children>
+</component>

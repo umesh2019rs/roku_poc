@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="LoginScreen" extends="Group" focusable="true">
+    <script type="text/brightscript" uri="pkg:/components/screens/LoginScreen.brs" />
+
+    <interface>
+        <field id="screenWidth" type="integer" alwaysNotify="true"/>
+        <field id="screenHeight" type="integer" alwaysNotify="true"/>
+        <field id="focus" type="boolean" alwaysNotify="true" onChange="onFousChanged"/>
+        <field id="usernameValue" type="string" alwaysNotify="true" />
+        <field id="passwordValue" type="string" alwaysNotify="true" />
+        <field id="focusIndex" type="integer" alwaysNotify="true" />
+        <field id="loginSuccess" type="boolean" alwaysNotify="true" />
+    </interface>
+
+    <children>   
+        <Label
+            id="focusIndicatorLabel"
+            translation="[60, 40]"
+            width="700"
+            height="40"
+            text="Focused: Username"
+            fontSize="28"
+            color="0xFFD700FF" />
+        <Group id="container" focusable="true">       
+          
+            <LayoutGroup id="layoutContainer" 
+                width="800" 
+                height="600"
+                layoutDirection="vert"
+                horizAlignment="center"
+                vertAlignment="center"
+                translation="[600, 300]"
+                itemSpacings="[10,10,10]"
+                focusable="true">
+                
+      
+                <Label 
+                    id="welcomeLabel"
+                    text="Welcome to Roku Test Channel Login to continue" 
+                    fontSize="50" 
+                    color="0xFFFFFF"
+                    horizAlignment="center"/>
+          
+                <TextEditBox 
+                    id="usernameField" 
+                    width="400" 
+                    height="50" 
+                    hintText="Username"
+                    focusable="true"
+                    horizAlignment="center"/>
+
+
+                <TextEditBox 
+                    id="passwordField" 
+                    width="400" 
+                    height="50" 
+                    hintText="Password" 
+                    secureMode="true"
+                    focusable="true"
+                    horizAlignment="center"/>
+
+                <Button 
+                    id="loginButton" 
+                    width="300" 
+                    height="60"
+                    focusable="true"
+                    horizAlignment="center">
+                    <Rectangle id="loginButtonBg" width="300" height="60" color="0x1E90FF" />
+                    <Label text="Login" translation="[50, 15]" fontSize="24"/>
+                </Button>
+
+            </LayoutGroup>
+
+        </Group>
+        <MiniKeyboard
+            id="loginMiniKeyboard"
+            translation="[300, 280]"
+            width="500"
+            height="250"
+            visible="false" />
+        <Button
+            id="keyboardDoneButton"
+            translation="[1580, 860]"
+            width="220"
+            height="70"
+            visible="false"
+            focusable="true">
+            <Rectangle id="keyboardDoneBg" width="220" height="70" color="0x2E8B57FF" />
+            <Label id="keyboardDoneLabel" text="Done" translation="[65, 20]" fontSize="28" color="0xFFFFFFFF" />
+        </Button>
+    </children>
+</component>

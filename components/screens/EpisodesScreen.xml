@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="EpisodesScreen" extends="Group" focusable="true">
+    <script type="text/brightscript" uri="pkg:/components/screens/EpisodesScreen.brs" />
+    <interface>
+        <field id="itemData" type="node" alwaysNotify="true" onChange="onItemDataChanged" />
+        <field id="episodeSelected" type="node" alwaysNotify="true" />
+    </interface>
+    <children>
+        <Label
+            id="seriesTitle"
+            translation="[80, 60]"
+            fontSize="36"
+            color="0xFFFFFFFF"
+            width="1600" />
+        <LabelList
+            id="seasonList"
+            translation="[80, 160]"
+            itemSize="[220, 56]"
+            itemSpacing="[0, 12]"
+            color="0xDDDDDDFF"
+            focusedColor="0xFFFFFFFF"
+            focusBitmapUri="pkg:/images/focus.9.png"
+            drawFocusFeedback="true"
+            vertFocusAnimationStyle="fixedFocus"
+            focusable="true" />
+        <RowList
+            id="episodeList"
+            translation="[360, 140]"
+            itemComponentName="EpisodesListItemComponent"
+            focusBitmapUri="pkg:/images/focus.9.png"
+            focusFootprintBitmapUri="pkg:/images/focus.9.png"
+            drawFocusFeedback="true"
+            focusable="true" />
+    </children>
+</component>

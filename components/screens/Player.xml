@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="Player" extends="Group" focusable="true">
+    <script type="text/brightscript" uri="pkg:/components/screens/Player.brs" />
+
+    <interface>
+        <field id="videoUrl" type="string" alwaysNotify="true" />
+        <field id="backPressed" type="boolean" alwaysNotify="true" />
+    </interface>
+
+    <children>
+        <Video
+            id="videoPlayer"
+            width="1280"
+            height="720"
+            translation="[0, 0]"/>
+    </children>
+</component>

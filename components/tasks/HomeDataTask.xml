@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="HomeDataTask" extends="Task">
+    <script type="text/brightscript" uri="pkg:/components/tasks/HomeDataTask.brs" />
+    <interface>
+        <field id="url" type="string" />
+        <field id="responseData" type="string" alwaysNotify="true"/>
+        <field id="fetchComplete" type="boolean" alwaysNotify="true"/>
+    </interface>
+</component>
+

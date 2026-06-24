@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+ 
+<component name="SimpleRowListItemData" extends="ContentNode">
+ 
+  <interface> 
+    <field id="episodeposition" type="string" />
+    <field id="url" type="string" />
+  </interface>
+
+</component>
